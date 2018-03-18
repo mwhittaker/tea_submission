@@ -3,6 +3,9 @@
 \usepackage[margin=0.5in]{geometry}
 \usepackage{cite}
 \usepackage{etoolbox}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{wrapfig}
 
 % https://tex.stackexchange.com/a/132647
 \patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
@@ -33,18 +36,20 @@ the algorithm, despite the fact that the algorithm is foundational and almost
 always asked about on exams. As a result, students either spend an exorbitant
 amount of time struggling to understand ARIES or flat out give up.
 
-% complexity of the algorithm
-%   - paper is 80 pages long
-%   - lots of corner cases
-%   - very hard to walk through in full detail
-%   - very difficult for students to get comfortable
-%   - grab quotes from textbook or paper saying that this stuff is hard
-%
-% Solution
-%   - aries simulator
-%   - describe + screenshots
-%   - with explanations
-%
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \centering
+  \includegraphics[width=0.5\textwidth]{aries.png}
+  \caption{Online ARIES Simulator}\label{LarrysAries}
+\end{wrapfigure}
+
+To make it easier for students to learn ARIES, another CS 186 GSI (Larry Xu)
+and I implemented the ARIES algorithm and an accompanying online visualization.
+The visualization is depicted in Figure~\ref{LarrysAries} and can be found
+online at \url{mwhittaker.github.io/aries}.
+% TODO: Mention that students can run on arbitrary inputs.
+% TODO: Mention that it comes with written explanations.
+% TODO: Mention that students can read the source code.
+
 % Evaluation
 %   - "This is a really really high quality teaching tool IMO. Great job Michael and Larry! :)"
 %   - count piazza questions? Analyze how many were answered with simulation
