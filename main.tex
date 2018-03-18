@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{cite}
+\usepackage{etoolbox}
+
+% https://tex.stackexchange.com/a/132647
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+
+
+\begin{document}
+\begin{center}
+  {\Large TITLE}
+
+  Michael Whittaker
+\end{center}
+
+In CS 186: Intro to Database Systems, students learn about the design and
+implementation of relational databases: complex pieces of software that are
+responsible for storing and managing data. One of the key challenges in
+designing a database is ensuring that data is never lost, even if the database
+crashes and later recovers. The de facto standard recovery algorithm that is
+taught in nearly every undergraduate course on databases is ARIES, and let me
+tell you, it's \emph{really} complicated. How complicated? Well, the original
+paper that introduced ARIES is a whopping \textbf{69 pages}
+long~\cite{mohan1992aries}! In it, the author notes that \emph{``concurrency
+and recovery are complex subjects to think about and program for.''} The CS 186
+textbook comments on ARIES saying that \emph{``the recovery manager is one of
+the hardest components of a DBMS to design and
+implement.''}~\cite{ramakrishnan2000database}. Due to its complexity, it's rare
+to see a professor (or even a textbook) walk through a complete execution of
+the algorithm, despite the fact that the algorithm is foundational and almost
+always asked about on exams. As a result, students either spend an exorbitant
+amount of time struggling to understand ARIES or flat out give up.
+
+% complexity of the algorithm
+%   - paper is 80 pages long
+%   - lots of corner cases
+%   - very hard to walk through in full detail
+%   - very difficult for students to get comfortable
+%   - grab quotes from textbook or paper saying that this stuff is hard
+%
+% Solution
+%   - aries simulator
+%   - describe + screenshots
+%   - with explanations
+%
+% Evaluation
+%   - "This is a really really high quality teaching tool IMO. Great job Michael and Larry! :)"
+%   - count piazza questions? Analyze how many were answered with simulation
+%   - github stars
+%   - 935 page views, 443 users,
+
+{
+  \footnotesize
+  \bibliographystyle{plain}
+  \bibliography{references}
+}
+\end{document}
